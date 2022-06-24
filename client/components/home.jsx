@@ -10,7 +10,9 @@ constructor(props){
     }
 }
 componentDidMount(){
-    axios.get().then()
+    axios.get("/").then(data=>this.setState({
+        adds:data
+    }))
 }
 render(){
     <Alladds adds={this.state.adds}/>
