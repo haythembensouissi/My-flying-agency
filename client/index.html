@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Aleo" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+    <script>
+         $(function(){
+    $('.left').on('click',function(){
+        $('.left').fadeOut(1000)
+      
+       
+    })
+    $('.right').on('click',function(){
+        $('.right').fadeOut(1000)
+      
+        
+    })
+    $('#but').css("background-color","brown")
+    
+}
+)
+
+    </script>
+        
+<script>
+    function change(){
+        let videoBtn = document.querySelectorAll('.vid-btn');
+videoBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.controls .active').classList.remove('active');
+        btn.classList.add('active');
+        let src = btn.getAttribute('data-src')
+        document.querySelector("#video-slider").src = src
+    });
+});
+
+    }
+</script>
+    
+    <div class="left">
+        <h2> Agency<h2>
+            <!--<img src="https://www.nessout.com/wp-content/uploads/2019/04/Cloud_Surf-1.gif" alt="" id="myimg">-->
+
+    </div>
+    <div class="right">
+        <h2>Fly with us</h2>
+    </div>
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+    
+        <a href="#" class="logo"><span>FLY</span> with us</a>
+    
+        <nav class="navbar"> 
+            <a href="home.html"><li><span class="material-symbols-outlined">
+                home
+                </span>home</li></a>
+            <a href="our projects.html"><li ><span class="material-symbols-outlined">
+                library_books
+                </span>our projects</li></a>
+            <a href="contact us.html"><li ><span class="material-symbols-outlined">
+                contacts
+                </span>contact us</li></a>
+        </nav>
+    
+        <div class="icons">
+           
+            <a href="loginpage.html"><i class="fas fa-user" id="login-btn"></i></a>
+        </div>
+    
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    
+    </header>
+    
+    
+  </div>
+  <div class="video-container">
+    <video src="vid-1.mp4" id="video-slider" loop autoplay muted></video>
+</div>
+  <div class="content">
+    <h3>adventure is worthwhile</h3>
+    <p>dicover new places with us, adventure awaits</p>
+    <a href="our projects.html" class="btn">discover more</a>
+</div>
+<button class="btn " style="margin-left: 40%; margin-top:100px" onclick="change()">click here to unlock background changement</button>
+<div class="controls">
+    <span class="vid-btn active" data-src="vid-1.mp4"></span>
+    <span class="vid-btn" data-src="vid-2.mp4"></span>
+    <span class="vid-btn" data-src="vid-3.mp4"></span>
+    <span class="vid-btn" data-src="vid-4.mp4"></span>
+    <span class="vid-btn" data-src="vid-5.mp4"></span>
+</div>
+  <div class="social">
+    <ul>
+         <a href="https://www.facebook.com/traveltodo.tn"> <li><i class="fa fa-facebook"></i></li></a>
+         <a href="https://www.instagram.com/traveltodo/?hl=fr"> <li><i class="fa fa-instagram"></i></li><a>
+          <a href="https://twitter.com/Traveltodo4"><li><i class="fa fa-twitter"></i></li></a>
+    </ul>
+</div>
+
+  <a href="signpage.html"><button class="but">sign in</button></a>
+  <a href="loginpage.html"><button class="but">log in</button></a>
+
+<footer class="footer">
+    <p>&copy;2022 all rights reserved</p>
+</footer>
+
+</body>
+</html>

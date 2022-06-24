@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Document</title>
+    <script >
+        function verif(){
+   
+var email=document.getElementById('email').value
+var password=document.getElementById('password').value
+
+
+function alpha(str){
+    for(i=0;i<str.length;i++){
+        if(str.charAt(i).toUpperCase()<"A"||str.charAt(i).toUpperCase()>"Z"){
+            return false
+        }
+        return true
+    }
+
+}
+function digits(str){
+    for(i=0;i<str.length;i++){
+        if(str.charAt(i)<"0"||str.charAt(i)>"9"){
+            return false
+        }
+        return true
+    }
+
+}
+
+if(window.localStorage.getItem('password')!=password){
+    alert('check the password')
+}
+else if(window.localStorage.getItem("email")!=email){
+    alert('check the email')
+}
+else{
+    window.location="./book.html"
+}
+
+
+
+}
+
+
+
+
+    </script>
+   
+    <form method="post" name="f" class="form" >
+        <table>
+            <tr>
+       <td class="text">email:</td>
+      <td> <input type="text" id="email" placeholder="your email here...">
+    </tr>
+    <tr>
+        <td class="text">password:</td> 
+        <td><input type="password" id="password" placeholder="your password here..."></td>
+        </tr>
+    
+<tr>
+    <td><input type="button" value="confirm" class="but" onclick="verif()"><input type="reset" value="cancel" class="but"></td>
+</tr>
+        </table>
+          
+            
+       
+        
+    </form>
+    
+</head>
+<body>
+    
+</body>
+</html>

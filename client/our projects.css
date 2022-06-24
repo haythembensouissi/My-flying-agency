@@ -1,0 +1,24 @@
+body{
+    background-image: url(https://i.gifer.com/fyCl.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.img1{
+   margin-left: 50%;
+}
+.img{
+    height: 300px;
+    width: 200px;
+    display: flex;
+    margin-left: 50px;
+}
+.par{
+   font-size: 30px;
+   color: red;
+   margin-left: 20px;
+}
+.imgs{
+    display: inline-flex;
+    
+}

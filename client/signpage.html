@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <title>Document</title>
+    <script >
+        function verif(){
+    var first=document.getElementById('first').value
+var last=document.getElementById('last').value
+var tel=document.getElementById('tel').value
+var email=document.getElementById('email').value
+var password=document.getElementById('password').value
+
+
+function alpha(str){
+    for(i=0;i<str.length;i++){
+        if(str.charAt(i).toUpperCase()<"A"||str.charAt(i).toUpperCase()>"Z"){
+            return false
+        }
+        return true
+    }
+
+}
+function digits(str){
+    for(i=0;i<str.length;i++){
+        if(str.charAt(i)<"0"||str.charAt(i)>"9"){
+            return false
+        }
+        return true
+    }
+
+}
+ if(alpha(first)==false||first==""){
+    alert('check the first name')
+    return
+}
+else if(alpha(last)==false||last==""){
+    alert('check the last name')
+    return
+}
+else if(tel.length!=8||digits(tel==false)){
+    alert('check the phone number ')
+}
+else if(password.indexOf(" ")!=-1||password==""){
+    alert('check the password')
+    return
+}
+else if(email.indexOf("@")==-1|| email.indexOf(".")==-1||email==""){
+    alert('check the email')
+    return
+}
+
+window.localStorage.setItem('email',email)
+window.localStorage.setItem("password",password)
+window.location="./book.html"
+
+}
+
+
+
+
+    </script>
+   
+    <form method="post" name="f" class="form" >
+        <table>
+            <tr>
+      <td class="text">firstName:</td> 
+      <td><input type="text" id="first" placeholder="your firstname here..."></td>
+    </tr>
+    <tr>
+        <td class="text">lastName:</td> 
+        <td><input type="text" id="last" placeholder="your lastname here..."></td>
+      </tr>
+      <tr>
+        <td class="text">phone:</td> 
+        <td><input type="text" id="tel" placeholder="your phone number here..."></td>
+      </tr>
+      <tr>
+        <td class="text">email:</td> 
+        <td><input type="text" id="email" placeholder="your email here..."></td>
+      </tr>
+                  <tr>
+      <td class="text">password:</td> 
+      <td><input type="password" id="password" placeholder="your password here"></td>
+    </tr>
+    <tr>
+       <td class="text">gender</td>
+       <td><select size="1" name="D1" id="gender">
+            <!-- <option selected>select</option>-->
+             <option>male</option>
+             <option>female</option>
+             </select></td>
+    </tr>
+      
+      
+     
+        </table>
+       
+            <a >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+           Confirm 
+        </a>
+    
+        </form>
+        <button class="custom-btn btn-11">Cancel<div class="dot"></div></button>
+        
+    </form>
+</head>
+<body>
+    
+</body>
+</html>
