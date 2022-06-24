@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="update.css">
+    <title>Document</title>
+    <script>
+        function fn(){
+            var date=document.getElementById("date").value
+            if(date){
+
+                alert("date changed successfully!")
+                window.location="./index.html"
+
+            }
+            else{
+                alert("choose the date")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="post">
+        <div class="inputBox">
+            <h3>arrivals</h3>
+            <input type="date" id="date">
+            <input type="button" class="btn" value="update" onclick="fn()">
+        </div>
+    </form>
+</body>
+</html>

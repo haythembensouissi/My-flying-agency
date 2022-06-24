@@ -9,21 +9,17 @@
 <script>
    
     function verif(){
-        var location=document.getElementById("location")
+        var location=document.getElementById("location").value
         var guests=document.getElementById("guests").value
         var date=document.getElementById("date").value
         if(guests==0){
             alert("the number of guests should not be 0")
-            console.log(date)
-            console.log(typeof date)
+            
             
         }
         else{
-
           alert("form submitted successfully")
-          console.log(date)
           window.location="./index.html"
-
         }
 
     }

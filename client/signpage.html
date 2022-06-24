@@ -52,10 +52,12 @@ else if(email.indexOf("@")==-1|| email.indexOf(".")==-1||email==""){
     alert('check the email')
     return
 }
-
+else{
+    window.location="./book.html"
+}
 window.localStorage.setItem('email',email)
 window.localStorage.setItem("password",password)
-window.location="./book.html"
+
 
 }
 
@@ -64,7 +66,7 @@ window.location="./book.html"
 
     </script>
    
-    <form method="post" name="f" class="form" >
+    <form method="post" name="f" class="form" method="post">
         <table>
             <tr>
       <td class="text">firstName:</td> 
@@ -106,9 +108,9 @@ window.location="./book.html"
             <span></span>
            Confirm 
         </a>
+        <button class="custom-btn btn-11" type="reset">cancel</button>
     
         </form>
-        <button class="custom-btn btn-11" type="reset">Cancel<div class="dot"></div></button>
         
     </form>
 </head>

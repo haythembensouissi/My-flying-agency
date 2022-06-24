@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cancel.css">
+    <title>Document</title>
+    <script>
+        function fn(){
+            var input=document.getElementById("destination").value
+            if(input){
+                alert("trip cancelled successfully")
+                window.location="./index.html"
+            }
+            else{
+                alert("enter an id or a destination")
+    
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="">
+        enter the trip id or the distination:<input type="text" class="inputBox" placeholder="enter the trip id or the distination" id="destination">
+        <button class="btn" onclick="fn()">confirm</button>
+    </form>
+</body>
+</html>
