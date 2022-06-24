@@ -2,11 +2,12 @@
 import React from "react";
 import axios from "axios";
 import Alladds from "./alladds";
+import dummydata from "./dummydata"
 class Adds extends React.Component{
 constructor(props){
     super(props)
     this.state={
-        adds:[]
+        adds:dummydata
     }
 }
 componentDidMount(){
@@ -18,4 +19,5 @@ render(){
     <Alladds adds={this.state.adds}/>
 }
 }
+import { from } from "responselike";
 ReactDOM.render(<Adds/>,document.getElementById("Adds"))

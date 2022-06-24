@@ -7,4 +7,3 @@ videoBtn.forEach(btn => {
         document.querySelector("#video-slider").src = src
     });
 });
-//hello

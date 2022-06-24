@@ -6,10 +6,32 @@
     <link rel="stylesheet" href="book.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<script>
+   
+    function verif(){
+        var location=document.getElementById("location")
+        var guests=document.getElementById("guests").value
+        var date=document.getElementById("date").value
+        if(guests==0){
+            alert("the number of guests should not be 0")
+            console.log(date)
+            console.log(typeof date)
+            
+        }
+        else{
+
+          alert("form submitted successfully")
+          console.log(date)
+          window.location="./index.html"
+
+        }
+
+    }
+</script>
 </head>
 <body>
     <section class="book" id="book">
-
+        
         <h1 class="heading">
             <span>b</span>
             <span>o</span>
@@ -30,21 +52,21 @@
             <form action="" method="post">
                 <div class="inputBox">
                     <h3>where to</h3>
-                    <input type="text" placeholder="place name">
+                    <input type="text" placeholder="place name" required id="location">
                 </div>
-                <div class="inputBox">
+                <div class="inputBox" aria-required="true">
                     <h3>how many</h3>
-                    <input type="number" placeholder="number of guests">
+                    <input type="number" placeholder="number of guests" id="guests" required>
                 </div>
                 <div class="inputBox">
                     <h3>arrivals</h3>
-                    <input type="date">
+                    <input type="date" id="date">
                 </div>
                 <div class="inputBox">
                     <h3>leaving</h3>
-                    <input type="date">
+                    <input type="date" required>
                 </div>
-                <input type="submit" class="btn" value="book now">
+                <input type="button" class="btn" value="book now" onclick="verif()">
             </form>
     
         </div>
