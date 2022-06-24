@@ -2,7 +2,7 @@ const queries=require("../queries/index")
 
 module.exports={
     getaUser:(req,res)=>{
-        handle.getOneuser(req.params.id,(result,err)=>{
+       queries.getOneuser(req.params.id,(result,err)=>{
             if(err){
                 res.status(500).send("error")
             }
@@ -12,7 +12,7 @@ module.exports={
         })
     },
     addaflight:(req,res)=>{
-        handle.addOneflight(req.body,(err,results)=>{
+       queries.addOneflight(req.body,(err,results)=>{
             if(err){
                 res.status(500).send("error")
             }
@@ -23,7 +23,7 @@ module.exports={
 
         
     },deleteaflight:(req,res)=>{
-        handle.cancelOneflight(req.params.id,(err,results)=>{
+       queries.cancelOneflight(req.params.id,(err,results)=>{
             if(err){
                 res.status(500).send("error")
             }
@@ -32,7 +32,7 @@ module.exports={
             }
         })
     },updateaflightDate:(req,res)=>{
-        handle.updateOneflight(req.params.id,(err,results)=>{
+       queries.updateOneflight(req.params.id,(err,results)=>{
             if(err){
                 res.status(500).send("error")
             }

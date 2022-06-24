@@ -211,6 +211,7 @@ header .search-bar-container{
 
 }
  .controls{
+  margin-top: 20px;
   padding:1rem;
   border-radius: 5rem;
   background:rgba(0,0,0,.7);
