@@ -11,9 +11,18 @@
     function verif(){
         var location=document.getElementById("location").value
         var guests=document.getElementById("guests").value
-        var date=document.getElementById("date").value
-        if(guests==0){
+        var date=document.getElementsByClassName("date").value
+        if(location.length==0){
+            alert("choose a destination")
+            return;
+        }
+        else if(!date==undefined){
+            alert("choose a date")
+            return;
+        }
+        else if(guests==0){
             alert("the number of guests should not be 0")
+            return;
             
             
         }
@@ -48,7 +57,7 @@
             <form action="" method="post">
                 <div class="inputBox">
                     <h3>where to</h3>
-                    <input type="text" placeholder="place name" required id="location">
+                    <input type="text" placeholder="place name"  id="location" aria-required="true" >
                 </div>
                 <div class="inputBox" aria-required="true">
                     <h3>how many</h3>
@@ -56,11 +65,11 @@
                 </div>
                 <div class="inputBox">
                     <h3>arrivals</h3>
-                    <input type="date" id="date">
+                    <input type="date" class="date">
                 </div>
                 <div class="inputBox">
                     <h3>leaving</h3>
-                    <input type="date" required>
+                    <input type="date" required class="date">
                 </div>
                 <input type="button" class="btn" value="book now" onclick="verif()">
             </form>
